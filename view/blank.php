@@ -119,7 +119,7 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <i class="fa fa-bell me-lg-2"></i>
-                            <span class="d-none d-lg-inline-flex">Notification</span>
+                            <span class="d-none d-lg-inline-flex">Thông báo</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
                             <a href="#" class="dropdown-item">
@@ -207,11 +207,12 @@
     <!-- Highlight Navbar -->
     <script type="text/javascript">
         var element = document.getElementById(<?php
-            if (!strpos($view, "_list"))
+            if (!strpos($view, "_list") && !strpos($view, "_maker"))
                 echo ("\"".$view."\"");
             else
             { 
-                echo ("\"".str_replace("_list", "", $view)."\"");
+                // echo ("\"".str_replace("_list", "", $view)."\"");
+                echo ("\"task\"");
             }
             ?>);
         element.classList.add("active");

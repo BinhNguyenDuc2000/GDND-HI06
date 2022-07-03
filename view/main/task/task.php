@@ -1,7 +1,7 @@
 <div class="container-fluid pt-4 px-4">
     <div class="row vh-100 bg-secondary rounded align-items-center justify-content-center mx-0">
         <div class="col-md-6 text-center">
-            <h3 class="text-sm-center">Nội dung công việc <?php echo ($data['task_name']); ?></h3>
+            <h3 class="text-sm-center">Công việc <?php echo ($data['task_name']); ?></h3>
         </div>
         <div style="display: flex; flex-wrap:wrap; justify-content: space-between;">
             <p style="height: 50px;"><b>Thời gian bắt đầu</b> 12/6/2022</p>

@@ -22,6 +22,18 @@ class Task extends Controller
         $this->info();
     }
 
+    public function make()
+    {
+        if (array_key_exists("status", $_SESSION) && strcmp($_SESSION["status"], "online") == 0)
+        {
+            $email = $_SESSION["email"];
+            $this->view("task_maker", ["email"=>$email]);
+            
+        }
+        else 
+            $this->redirect("Login");
+    }
+
     public function taskById()
     {
         if (array_key_exists("status", $_SESSION) && strcmp($_SESSION["status"], "online") == 0)
