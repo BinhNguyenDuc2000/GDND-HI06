@@ -28,6 +28,7 @@
 
         document.getElementById("btnUpdate").onclick = function (){
             alert("Cập nhật thành công");
+            window.location.href = "https://binhnguyen-tech.stackstaging.com/TreeCare/Dashboard#CompletedTask";
         }
     
 </script>

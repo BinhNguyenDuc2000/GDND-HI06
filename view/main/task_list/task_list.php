@@ -15,8 +15,7 @@
                         <input class="form-check-input m-0" type="checkbox">
                         <div class="w-100 ms-3">
                             <div class="d-flex w-100 align-items-center justify-content-between">
-                                <a href="Task?method=taskById"><span>Short task goes here...</span></a>
-                                
+                                <a href="Task?method=taskById"><span id="FirstTask">Short task goes here...</span></a>
                             </div>
                         </div>
                     </div>
@@ -60,4 +59,11 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        
+        if (window.location.href.split('#')[1] == "CreatedTask")
+        {
+            document.getElementById("FirstTask").innerHTML = "Short task goes here...  &#09<b style=\"color: red;\">Mới</b>";
+        }
+    </script>
 </div>

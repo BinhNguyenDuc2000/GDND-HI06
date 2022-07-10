@@ -21,6 +21,7 @@
 <script type="text/javascript">
         document.getElementById("btnCreate").onclick = function (){
             alert("Tạo công việc thành công");
+            window.location.href = "https://binhnguyen-tech.stackstaging.com/TreeCare/Task?method=list#CreatedTask";
         }
     
 </script>

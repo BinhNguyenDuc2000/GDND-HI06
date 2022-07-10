@@ -8,10 +8,10 @@
                     <a href="Task?method=list">Tất cả công việc</a>
                 </div>
                 <div class="d-flex align-items-center border-bottom py-2">
-                    <input class="form-check-input m-0" type="checkbox">
+                    <input id="DailyTaskCheckBox" class="form-check-input m-0" type="checkbox">
                     <div class="w-100 ms-3">
                         <div class="d-flex w-100 align-items-center justify-content-between">
-                            <a href="Task?method=taskById"><span>Short task goes here...</span></a>
+                            <a href="Task?method=taskById"><span id="DailyTask">Short task goes here...</span></a>
                             <button class="btn btn-sm"><i class="fa fa-times"></i></button>
                         </div>
                     </div>
@@ -19,4 +19,12 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        
+        if (window.location.href.split('#')[1] == "CompletedTask")
+        {
+            document.getElementById("DailyTaskCheckBox").checked = true;
+            document.getElementById("DailyTask").innerHTML = "Short task goes here...  &#09<b style=\"color: red;\">Đang chờ phê duyệt</b>"
+        }
+    </script>
 </div>
