@@ -100,7 +100,7 @@
         data: {
             labels: ["2016", "2017", "2018", "2019", "2020", "2021", "2022"],
             datasets: [{
-                    label: "Salse",
+                    label: "Sale",
                     data: [15, 30, 55, 45, 70, 65, 85],
                     backgroundColor: "rgba(235, 22, 22, .7)",
                     fill: true
@@ -127,7 +127,7 @@
         data: {
             labels: [50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150],
             datasets: [{
-                label: "Salse",
+                label: "Sale",
                 fill: false,
                 backgroundColor: "rgba(235, 22, 22, .7)",
                 data: [7, 8, 8, 9, 9, 9, 10, 11, 14, 14, 15]
@@ -137,30 +137,6 @@
             responsive: true
         }
     });
-
-
-    // Single Bar Chart
-    var ctx4 = $("#bar-chart").get(0).getContext("2d");
-    var myChart4 = new Chart(ctx4, {
-        type: "bar",
-        data: {
-            labels: ["Italy", "France", "Spain", "USA", "Argentina"],
-            datasets: [{
-                backgroundColor: [
-                    "rgba(235, 22, 22, .7)",
-                    "rgba(235, 22, 22, .6)",
-                    "rgba(235, 22, 22, .5)",
-                    "rgba(235, 22, 22, .4)",
-                    "rgba(235, 22, 22, .3)"
-                ],
-                data: [55, 49, 44, 24, 15]
-            }]
-        },
-        options: {
-            responsive: true
-        }
-    });
-
 
     // Pie Chart
     var ctx5 = $("#pie-chart").get(0).getContext("2d");
@@ -209,4 +185,34 @@
 
     
 })(jQuery);
+
+    // Single Bar Chart
+    var ctx4 = $("#bar-chart").get(0).getContext("2d");
+    var myChart4 = new Chart(ctx4, {
+        label: "bar",
+        type: "bar",
+        data: {
+            labels: ["Italy", "France", "Spain", "USA", "Argentina"],
+            datasets: [{
+                backgroundColor: [
+                    "rgba(235, 22, 22, .7)",
+                    "rgba(235, 22, 22, .6)",
+                    "rgba(235, 22, 22, .5)",
+                    "rgba(235, 22, 22, .4)",
+                    "rgba(235, 22, 22, .3)"
+                ],
+                data: [55, 49, 44, 24, 15]
+            }]
+        },
+        options: {
+            responsive: true
+        },
+        legend: {
+            display: true,
+            legendText : ['Current','Vs last week/month/year','% Change']
+        }
+    });
+
+
+    
 

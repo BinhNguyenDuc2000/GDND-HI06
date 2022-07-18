@@ -11,12 +11,12 @@ class Login extends Controller
 
     public function info()
     {   
-        if (array_key_exists("status", $_SESSION) && strcmp($_SESSION["status"], "online") == 0)
-        {
-            $this->popUp("Đã đăng nhập");
-            $this->redirect("Dashboard");
-            return;
-        }
+        // if (array_key_exists("status", $_SESSION))
+        // {
+        //     $this->popUp("Đã đăng nhập");
+        //     $this->redirect("Dashboard");
+        //     return;
+        // }
         
         if (isset($_SESSION["email"]))
         {
@@ -55,7 +55,13 @@ class Login extends Controller
             {
                 $_SESSION["email"] = $_POST["email"];
                 $_SESSION["password"] = $_POST["password"];
-                $_SESSION["status"] = "online";
+                // $_SESSION["status"] = "online";
+                if (isset($_POST["type"])) {
+                    $_SESSION["status"] = $_POST["type"];
+
+                }
+                else
+                    $_SESSION["status"] = "employee";
                 $this->redirect("Dashboard");
                 return;
             }

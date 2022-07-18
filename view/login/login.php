@@ -66,15 +66,23 @@
                                     value=<?php
                                     echo '"'.$data["password"].'"';
                                         ?> />
-                                
+                            </div>
+                            <div class="form-floating mb-4">
+                                <h8>Chức vụ</h8>    
+                                <select name="type" id="type" value="Nhân viên" class="py-3 w-100 mb-4" >
+                                    <option value="Nhân viên" class="text-center">Nhân viên</option>
+                                    <option value="Quản lý" class="text-center">Quản lý</option>
+                                </select>
                             </div>
                             <!-- <div class="d-flex align-items-center justify-content-between mb-4">
                                 <div class="form-check">
                                 <input type="checkbox" class="form-check-input" id="remember" checked>
                                 <label class="form-check-label" for="remember">Lưu mật khẩu</label>
                             </div> -->
-                                <a href="">Quên mật khẩu</a>
-                            </div>
+                                <!-- <a href="">Quên mật khẩu</a> -->
+                                
+                            <!-- </div> -->
+                            
                             <button type="btnLogin" name="btnLogin" id="btnLogin" class="btn btn-primary py-3 w-100 mb-4">Đăng nhập</button>
                             <!-- <p class="text-center mb-0">Không có tài khoản? <a href="">Đăng ký</a></p> -->
                         </div>

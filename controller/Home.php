@@ -4,7 +4,7 @@ class Home extends Controller
 {
     public function info()
     {
-        if (array_key_exists("status", $_SESSION) && strcmp($_SESSION["status"], "online") == 0)
+        if (array_key_exists("status", $_SESSION))
         {
             $email = $_SESSION["email"];
             $this->view("dashboard", ["email"=>$email]);

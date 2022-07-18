@@ -4,7 +4,7 @@
             <div class="h-100 bg-secondary rounded p-4">
                 <div class="d-flex align-items-center justify-content-between mb-4">
                     <h6 class="mb-0">Danh sách công việc</h6>
-                    <a href="Task?method=make">Giao việc</a>
+                    <a href="Task?method=make" class="Manager" id="Manager">Giao việc</a>
                 </div>
                 <!-- <div class="d-flex mb-2">
                     <input class="form-control bg-dark border-0" type="text" placeholder="Enter task">
@@ -65,5 +65,13 @@
         {
             document.getElementById("FirstTask").innerHTML = "Short task goes here...  &#09<b style=\"color: red;\">Mới</b>";
         }
+    </script>
+    <!-- Hide items -->
+    <script type="text/javascript">
+        const collection = document.getElementsByClassName("Manager");
+        // if ($data['type'] != "Quản lý")
+            for (let i = 0; i < collection.length; i++) {
+                collection[i].classList.add("d-none");
+            }
     </script>
 </div>
