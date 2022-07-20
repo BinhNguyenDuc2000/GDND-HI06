@@ -162,7 +162,7 @@
 
             <!-- Main Here-->
             <div class="main">
-                <?php
+                <?php                
                 // để dữ liệu vào đây
                 require_once (__DIR__). "/main/".$view."/".$view.".php";
                 ?>

@@ -28,15 +28,78 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="d-flex align-items-center border-bottom py-2">
-                    <input class="form-check-input m-0" type="checkbox" checked>
-                    <div class="w-100 ms-3">
-                        <div class="d-flex w-100 align-items-center justify-content-between">
-                            <a href="Task?method=taskById"><span>Short task goes here...</span></a>
-                            <button class="btn btn-sm text-primary"><i class="fa fa-times"></i></button>
+                    <div class="d-flex align-items-center border-bottom py-2">
+                        <input class="form-check-input m-0" type="checkbox">
+                        <div class="w-100 ms-3">
+                            <div class="d-flex w-100 align-items-center justify-content-between">
+                                <a href="Task?method=taskById"><span>Short task goes here...</span></a>
+                                
+                            </div>
                         </div>
                     </div>
-                </div> -->
+                    <div class="d-flex align-items-center border-bottom py-2">
+                        <input class="form-check-input m-0" type="checkbox">
+                        <div class="w-100 ms-3">
+                            <div class="d-flex w-100 align-items-center justify-content-between">
+                                <a href="Task?method=taskById"><span>Short task goes here...</span></a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center border-bottom py-2">
+                        <input class="form-check-input m-0" type="checkbox">
+                        <div class="w-100 ms-3">
+                            <div class="d-flex w-100 align-items-center justify-content-between">
+                                <a href="Task?method=taskById"><span>Short task goes here...</span></a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center border-bottom py-2">
+                        <input class="form-check-input m-0" type="checkbox">
+                        <div class="w-100 ms-3">
+                            <div class="d-flex w-100 align-items-center justify-content-between">
+                                <a href="Task?method=taskById"><span>Short task goes here...</span></a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center border-bottom py-2">
+                        <input class="form-check-input m-0" type="checkbox">
+                        <div class="w-100 ms-3">
+                            <div class="d-flex w-100 align-items-center justify-content-between">
+                                <a href="Task?method=taskById"><span>Short task goes here...</span></a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center border-bottom py-2">
+                        <input class="form-check-input m-0" type="checkbox">
+                        <div class="w-100 ms-3">
+                            <div class="d-flex w-100 align-items-center justify-content-between">
+                                <a href="Task?method=taskById"><span>Short task goes here...</span></a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center border-bottom py-2">
+                        <input class="form-check-input m-0" type="checkbox">
+                        <div class="w-100 ms-3">
+                            <div class="d-flex w-100 align-items-center justify-content-between">
+                                <a href="Task?method=taskById"><span>Short task goes here...</span></a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center border-bottom py-2">
+                        <input class="form-check-input m-0" type="checkbox">
+                        <div class="w-100 ms-3">
+                            <div class="d-flex w-100 align-items-center justify-content-between">
+                                <a href="Task?method=taskById"><span>Short task goes here...</span></a>
+                                
+                            </div>
+                        </div>
+                    </div>
                     <div class="d-flex align-items-center border-bottom py-2">
                         <input class="form-check-input m-0" type="checkbox">
                         <div class="w-100 ms-3">
@@ -55,6 +118,7 @@
                             </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </div>
@@ -69,7 +133,11 @@
     <!-- Hide items -->
     <script type="text/javascript">
         const collection = document.getElementsByClassName("Manager");
-        // if ($data['type'] != "Quản lý")
+        $data = <?php 
+        echo("\"");
+        echo($data["type"]);
+        echo("\""); ?>;
+        if ($data.localeCompare("Quản lý") != 0)
             for (let i = 0; i < collection.length; i++) {
                 collection[i].classList.add("d-none");
             }
